@@ -70,6 +70,7 @@ aesara-cache = "aesara.bin.aesara_cache:main"
 source = "vcs"
 # Restrict the default regex to only match tags that start with "rel-".
 tag-pattern = '^rel-(?P<version>[vV]?\d+(?:\.\d+){0,2}[^\+]*)(?:\+.*)?$'
+fallback-version = "0.0.1"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "aesara/_version.py"
