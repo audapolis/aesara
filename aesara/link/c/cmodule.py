@@ -2464,6 +2464,8 @@ class GCC_compiler(Compiler):
         for lib in libs:
             ldflag = f"-l{lib}"
             for lib_dir in lib_dirs:
+                if not os.path.isdir(lib_dir):
+                    continue
                 lib_dir = lib_dir.strip('"')
                 windows_styled_libs = [
                     fname
